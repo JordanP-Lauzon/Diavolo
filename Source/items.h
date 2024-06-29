@@ -125,6 +125,7 @@ enum _unique_items : int8_t {
 	UITEM_BLEEDER,
 	UITEM_CONSTRICT,
 	UITEM_ENGAGE,
+	UITEM_FROSTMOURNE,
 	UITEM_INVALID = -1,
 };
 
