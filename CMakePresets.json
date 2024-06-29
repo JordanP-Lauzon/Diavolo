@@ -1,0 +1,54 @@
+  {
+  "version": 3,
+  "cmakeMinimumRequired": {
+    "major": 3,
+    "minor": 19,
+    "patch": 0
+  },
+  "configurePresets": [
+    {
+      "name": "default",
+      "hidden": false,
+      "generator": "Unix Makefiles",
+      "binaryDir": "${sourceDir}/build",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug"
+      }
+    },
+    {
+      "name": "release",
+      "hidden": false,
+      "generator": "Unix Makefiles",
+      "binaryDir": "${sourceDir}/build-release",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release"
+      }
+    }
+  ],
+  "buildPresets": [
+    {
+      "name": "default",
+      "hidden": false,
+      "configurePreset": "default",
+      "jobs": 4
+    },
+    {
+      "name": "release",
+      "hidden": false,
+      "configurePreset": "release",
+      "jobs": 4
+    }
+  ],
+  "testPresets": [
+    {
+      "name": "default",
+      "hidden": false,
+      "configurePreset": "default"
+    },
+    {
+      "name": "release",
+      "hidden": false,
+      "configurePreset": "release"
+    }
+  ]
+}
